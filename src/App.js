@@ -112,7 +112,7 @@ class App extends React.Component {
             </div>
           </main>
           <footer>
-            All rights reserved
+            2020 All rights reserved
           </footer>
       </div>
     );
