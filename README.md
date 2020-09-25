@@ -2,7 +2,7 @@
 
 MERN ecommerce website app
 
-# ∫tep of the project:
+# ∫teps of the project:
 
 - Design Shopping Cart Using HTML and CSS
 - Implement React Components For Product List, Filter, Cart
