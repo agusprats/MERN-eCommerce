@@ -6,6 +6,7 @@ import Cart from "./components/Cart";
 import store from './store';
 import { Provider } from 'react-redux';
 
+
 class App extends React.Component {
   constructor(){
     super();
@@ -22,6 +23,21 @@ class App extends React.Component {
     alert("Need to save order for" + order.name)
   }
 
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      products: data.products,
+      cartItems:localStorage.getItem("cartItems")
+      ? JSON.parse(localStorage.getItem("cartItems"))
+      :[], 
+      size: "",
+      sort: "",
+    };
+  }
+  createOrder=(order)=>{
+    alert("Need to save order for" + order.name)
+  }
   removeFromCart = (product)=>{
     const cartItems=this.state.cartItems.slice();
     this.setState({
@@ -118,3 +134,4 @@ class App extends React.Component {
   }
 }
 export default App;
+
