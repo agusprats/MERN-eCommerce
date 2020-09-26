@@ -12,6 +12,41 @@ mongoose.connect('mongodb://localhost/react-shopping-db',{
    useUnifiedTopology: true,
 });
 
+const Order = mongoose.model("order", mongoose.Schema({
+    _id:{
+        type: String,
+        default: shortid.generate
+    },
+    email: String,
+    name: String,
+    address: String,
+    total: Number,
+    cartItems: [{
+        _id: String,
+        title: String,
+        proce: Number,
+        count: Number
+    },
+],
+},
+{
+    timestamps: true,
+}
+));
+
+app.post("/api/orders", async(req, res) => {
+    if( !req.body.name || 
+        !req.body.email ||
+        !req.body.address ||
+        !req.body.total ||
+        !req.body.cartItems
+        ){
+        return res.send({message: "Data is required..."});
+        }
+        const order  = await Order(req.body).save();
+        res.send(order);
+});
+
 const Product = mongoose.model(
     'products', 
     new mongoose.Schema({
