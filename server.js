@@ -76,7 +76,17 @@ app.post('/api/products', async (req, res) => {
 app.delete('/api/products/:id', async(req, res) => {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id);
     res.send(deletedProduct);
-})
+});
+
+app.get("/api/orders", async(req, res) => {
+    const orders  = await Order.find({});
+    res.send(orders);
+});
+
+app.get("/api/orders/:id", async(req, res) => {
+    const order  = await Order.findByIdAndDelete(req.params.id);
+    res.send(order);
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log('serve at http://localhost:5000'));
