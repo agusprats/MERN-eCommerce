@@ -24,7 +24,7 @@ const Order = mongoose.model("order", mongoose.Schema({
     cartItems: [{
         _id: String,
         title: String,
-        proce: Number,
+        price: Number,
         count: Number
     },
 ],
@@ -83,7 +83,7 @@ app.get("/api/orders", async(req, res) => {
     res.send(orders);
 });
 
-app.get("/api/orders/:id", async(req, res) => {
+app.delete("/api/orders/:id", async(req, res) => {
     const order  = await Order.findByIdAndDelete(req.params.id);
     res.send(order);
 });

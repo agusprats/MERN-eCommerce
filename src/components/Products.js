@@ -36,7 +36,9 @@ return (
                 <ul className="products">
             {this.props.products.map(product=>(
                 <li key={product._id}>
+                    
                     <div className="product">
+                        <div className="shadow p-3 mb-5 bg-white rounded">
                         <a href={"#"+product._id} 
                             onClick={()=>this.openModal(product)}>
                             <img src={product.image} alt={product.title}></img>
@@ -49,6 +51,7 @@ return (
                             </button>
                         </div>
                     </div>
+                    </div>
                 </li>
             ))}
             </ul>
@@ -56,13 +59,17 @@ return (
             }
         </Fade>
             {product &&  (
-                <Modal isOpen={true}
+                
+                <Modal  isOpen={true}
                     onRequestClose={this.closeModal} >
-                        <Zoom>
+                        
+                        <Zoom >
                         <button className="close-modal" onClick={this.closeModal}>
                         x
                         </button>
+                
                     <div className="product-details">
+                    
                         <img src={product.image} alt={product.title}></img>
                         <div className="product-details-description">
                         <p><strong>{product.title}</strong> </p>
@@ -86,8 +93,11 @@ return (
                         </div>
                     </div>
                     </div>
+                    
                 </Zoom>
+                
             </Modal>
+            
             )}
             </div>
         )
