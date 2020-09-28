@@ -32,36 +32,63 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: #EE5152;
 }
+
+
 header {
   grid-area: header;
-  background-color: #203040;
+  
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  margin-bottom: 20px;
+  background: #1488CC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
 header a {
+  padding: 1rem;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-left: 25px;
   color: #ffffff;
   text-decoration: none;
+}
+
+.orders{
+  margin-top: 25px;
+}
+
+.orders h2 {
+  margin-bottom: 25px;
+}
+.orders thead{
+  color: #EE5152;
 }
 main {
   grid-area: main;
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 .main {
   flex: 3 60rem;
@@ -84,12 +111,14 @@ footer {
   flex: 0 1 29rem;
   height: 47rem;
   padding: 1rem;
+  margin-bottom: 25px;
 }
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin-bottom: 25px;
 }
 .product img {
   max-width: 37rem;
@@ -116,9 +145,18 @@ footer {
 }
 .button:hover {
   border: 0.1rem #808080 solid;
+  background-color: #0575E6;
+  color: #EE5152;
+  transition: 1000ms;
 }
 .button.primary {
-  background-color: #f0c040;
+  background-color: #F1C164;
+}
+
+.button.primary:hover{
+  background-color: #0575E6;
+  color: #EE5152;
+  transition: 1000ms;
 }
 
 /* Filter */
@@ -194,6 +232,7 @@ input {
 }
 /* Product Details */
 .product-details {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -213,6 +252,7 @@ input {
   right: 1rem;
   top: 2.5rem;
   z-index: 1000;
+  margin-top: 20px;
 }
 
 /* Order Details */
