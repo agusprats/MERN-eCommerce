@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"))
 
-mongoose.connect(
-    process.env.MONGODB_URL ||
+
+mongoose.connect(process.env.MONGODB_URL ||
     'mongodb://localhost/react-shopping-db',{
     useNewUrlParser: true,
     useCreateIndex: true,
