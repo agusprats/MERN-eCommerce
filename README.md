@@ -1,6 +1,12 @@
 # React Shopping Cart
 
-MERN ecommerce website app
+MERN e-Commerce Website App
+
+Oh! My Dress is a small but functional responsive shopping cart with react and redux, user-friendly frontend and a simple backend with Node and MongoDB.<br/>
+
+The frontend contains products list, shopping cart and checkout components, with animations, modals and zoom by react-reveal, managing state by Redux.<br/>
+
+The project is hosted on Heroku and MongoDB Atlas.
 
 # ∫teps of the project:
 
